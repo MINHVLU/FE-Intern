@@ -1,6 +1,6 @@
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import "../styles/renderErrorMessage.scss";
+import "../styles/renderErrorMessage.css";
 
 export default function Login() {
   const [errorMessages, setErrorMessages] = useState({});
