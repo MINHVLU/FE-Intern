@@ -2,19 +2,19 @@
     "database": [
       {
         "email": "phuc@gmail.com",
-        "password": 1
+        "pass": 1
       },
       {
         "email": "long@gmail.com",
-        "password": 2
+        "pass": 2
       },
       {
         "email": "minh@gmail.com",
-        "password": 3
+        "pass": 3
       },
       {
         "email": "khoa@gmail.com",
-        "password": 4
+        "pass": 4
       }
     ],
     "profile": {
