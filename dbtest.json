@@ -1,0 +1,23 @@
+{
+    "database": [
+      {
+        "email": "phuc@gmail.com",
+        "password": 1
+      },
+      {
+        "email": "long@gmail.com",
+        "password": 2
+      },
+      {
+        "email": "minh@gmail.com",
+        "password": 3
+      },
+      {
+        "email": "khoa@gmail.com",
+        "password": 4
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

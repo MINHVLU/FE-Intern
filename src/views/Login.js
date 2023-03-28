@@ -1,6 +1,7 @@
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import "../styles/renderErrorMessage.css";
+import "../styles/renderErrorMessage.scss";
+import CreateAccount from "./CreateAccount";
 
 export default function Login() {
   const [errorMessages, setErrorMessages] = useState({});
@@ -136,7 +137,7 @@ export default function Login() {
   return (
     <div className="app">
       <div className="login-form">
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? <div><CreateAccount /></div> : renderForm}
       </div>
     </div>
   );
