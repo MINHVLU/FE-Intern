@@ -31,6 +31,4 @@ function DeleteForm() {
   );
 }
 
-Phúc
-
 export default DeleteForm;
