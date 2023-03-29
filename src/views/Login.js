@@ -2,6 +2,8 @@ import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import "../styles/renderErrorMessage.scss";
 import CreateAccount from "./CreateAccount";
+import DeleteForm from './DeleteAccount';
+
 
 export default function Login() {
   const [errorMessages, setErrorMessages] = useState({});
@@ -34,10 +36,11 @@ export default function Login() {
 
     // So sánh thông tin
     if (userData) {
-      if (userData.password !== pass.value) {
+      if (userData.pass !== pass.value) {
         // Sai password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
+        //Đúng password
         setIsSubmitted(true);
       }
     } else {
@@ -112,14 +115,6 @@ export default function Login() {
                         </Button>
                       </div>
                     </Form>
-                    <div className="mt-3">
-                      <p className="mb-0  text-center">
-                        Don't have an account?{" "}
-                        <a href="{''}" className="text-primary fw-bold">
-                          Sign Up
-                        </a>
-                      </p>
-                    </div>
                   </div>
                 </div>
                 <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary fixed-bottom">
@@ -137,7 +132,14 @@ export default function Login() {
   return (
     <div className="app">
       <div className="login-form">
-        {isSubmitted ? <div><CreateAccount /></div> : renderForm}
+        {isSubmitted ? (
+          <div>
+            <CreateAccount />
+            <DeleteForm />
+          </div>
+        ) : (
+          renderForm
+        )}
       </div>
     </div>
   );

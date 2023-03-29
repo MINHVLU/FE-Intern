@@ -1,50 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from "react";
 
 const CreateAccount = () => {
-  const [user, setUser] = useState({});
+  const [headquarterId, setheadquarterId] = useState("");
+  const [employeeId, setemployeeId] = useState("");
+  const [timekeepingType, settimekeepingType] = useState("");
 
-  useEffect(() => {
-    const updateUser = async () => {
-      try {
-        const response = await fetch('https://my-json-server.typicode.com/PhucChiVas161/LearnReactJS/database', {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(user)
-        });
-
-        const data = await response.json();
-        setUser(data);
-      } catch (error) {
-        console.error(error);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch(
+      "http://192.168.1.18:8080/api/v1/timekeeping/store",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ headquarterId, employeeId, timekeepingType}),
       }
-    };
-
-    updateUser();
-  }, [user]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setUser(prevState => ({ ...prevState, [name]: value }));
+    );
+    const data = await response.json();
+    if (data.success) {
+      alert("Add Item successful!");
+    } else {
+      alert("Add Item failed: ");
+    }
   };
 
   return (
-    <div>
-      <h1>Edit User</h1>
-      <form>
-        <label>
-          Email:
-          <input type="Email" name="email" value={user.email || ''} onChange={handleChange} />
-        </label>
-        <label>
-          Email:
-          <input type="password" name="password" value={user.password || ''} onChange={handleChange} />
-        </label>
-        <button type="submit">Save</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Trụ sở chính:
+        <input
+          placeholder="..."
+          type="text"
+          value={headquarterId}
+          onChange={(event) => setheadquarterId(event.target.value)}
+        />
+      </label>
+
+      <label>
+        ID Nhân viên:
+        <input
+          placeholder="..."
+          type="text"
+          value={employeeId}
+          onChange={(event) => setemployeeId(event.target.value)}
+        />
+      </label>
+      <label>
+        Chấm công:
+        <input
+          placeholder="..."
+          type="text"
+          value={timekeepingType}
+          onChange={(event) => settimekeepingType(event.target.value)}
+        />
+      </label>
+      
+      <button type="submit">Update</button>
+    </form>
   );
-}
+};
 
 export default CreateAccount;
