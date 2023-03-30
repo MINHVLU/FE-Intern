@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreateAccount = () => {
+const ButtonCreateAccount = () => {
   const [headquarterId, setheadquarterId] = useState("");
   const [employeeId, setemployeeId] = useState("");
   const [timekeepingType, settimekeepingType] = useState("");
@@ -14,7 +14,7 @@ const CreateAccount = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ headquarterId, employeeId, timekeepingType}),
+        body: JSON.stringify({ headquarterId, employeeId, timekeepingType }),
       }
     );
     const data = await response.json();
@@ -55,10 +55,10 @@ const CreateAccount = () => {
           onChange={(event) => settimekeepingType(event.target.value)}
         />
       </label>
-      
+
       <button type="submit">Update</button>
     </form>
   );
 };
 
-export default CreateAccount;
+export default ButtonCreateAccount;

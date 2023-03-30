@@ -22,7 +22,6 @@ export default function Login() {
     uname: "invalid username",
     pass: "invalid password",
   };
-console.log(database)
   const handleSubmit = (event) => {
     //Tránh load lại trang
     event.preventDefault(); //<== dòng này có nghĩ là khi ng dùng nhập sai thì cũng ko load lại trang
@@ -34,7 +33,7 @@ console.log(database)
 
     // So sánh thông tin
     if (userData) {
-      if (userData.pass !== pass.value) { 
+      if (userData.pass !== pass.value) {
         // Sai password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
@@ -137,7 +136,13 @@ console.log(database)
   return (
     <div className="app">
       <div className="login-form">
-        {isSubmitted ? <div><MyComponent /></div> : renderForm}
+        {isSubmitted ? (
+          <div>
+            <MyComponent />
+          </div>
+        ) : (
+          renderForm
+        )}
       </div>
     </div>
   );
