@@ -1,6 +1,5 @@
-import { render } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
-import "../us_style/UserList_Table_content.scss";
+import "../styles/UserList_Table_content.scss";
 import DeleteButton from "./DeleteAccount";
 
 function UserList_Table_content(props) {
@@ -37,7 +36,8 @@ function UserList_Table_content(props) {
     setUsers2(users2.filter((item) => item.timekeepingId !== event));
   };
 
-  const onlcickAdd = (even) => {
+  const onlcickAdd = () => {
+    //có tham số even
     props.Handlechangeinput();
   };
 
