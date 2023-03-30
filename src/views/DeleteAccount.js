@@ -1,34 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function DeleteForm() {
-  const [id, setId] = useState("");
+function DeleteButton({ api, resetView }) {
+  const [id, setId] = useState(null);
 
-  const handleDelete = async (event) => {
-    event.preventDefault();
-    const response = await fetch(
-      `http://192.168.1.18:8080/api/v1/timekeeping/${id}/delete`,
-      {
+  useEffect(() => {
+    console.log(id);
+    resetView(id);
+    if (id !== null) {
+      fetch(`https://be-intern.onrender.com/api/v1/timekeeping/${id}/delete`, {
         method: "DELETE",
-      }
-    );
-    const data = await response.json();
-    if (data.success) {
-        alert("Delete successful!");
-      } else {
-        alert("Delete failed: ");
-      }
-  };
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            alert("thanh cong roi mng oi");
+          } else {
+            alert("Hong on roi Huy oi");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [id]);
 
-  return (
-    <form onSubmit={handleDelete}>
-      <input
-        type="text"
-        value={id}
-        onChange={(event) => setId(event.target.value)}
-      />
-      <button type="submit">Delete</button>
-    </form>
-  );
+  return <button onClick={() => setId(api)}>Delete</button>;
 }
 
-export default DeleteForm;
+export default DeleteButton;
