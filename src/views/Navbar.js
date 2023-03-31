@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Navbar.scss"
-import Chamcong from "./Chamcong_Navbar";
+import Chamcong from "./ChamcongNavbar";
 import Listusers from "./Listusers";
 
 

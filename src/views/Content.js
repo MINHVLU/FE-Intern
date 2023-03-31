@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Content.scss"
-import Chamcong_content from "./Chamcong_content";
-import UsersList_content from "./UsersList_content";
+import ChamcongContent from "./ChamcongContent";
+import UsersListContent from "./UsersListContent";
 
 class Content extends React.Component {
 
@@ -12,9 +12,9 @@ class Content extends React.Component {
             <div className="content">
                 <>
                     {(show === "chamcong") ?
-                        <Chamcong_content />
+                        <ChamcongContent />
                         : (show === "userlist") ?
-                            <UsersList_content />
+                            <UsersListContent />
                             :
                             <></>
 

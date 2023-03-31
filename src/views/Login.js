@@ -11,7 +11,7 @@ export default function Login() {
   // XỬ lý API
   useEffect(() => {
     fetch(
-      "https://my-json-server.typicode.com/PhucChiVas161/LearnReactJS/database"
+      "https://my-json-server.typicode.com/PhucChiVas161/FE-Intern/database"
     )
       .then((response) => response.json())
       .then((data) => setDatabase(data))

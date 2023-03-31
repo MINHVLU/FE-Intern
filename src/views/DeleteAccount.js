@@ -4,7 +4,6 @@ function DeleteButton({ api, resetView }) {
   const [id, setId] = useState(null);
 
   useEffect(() => {
-    resetView(id);
     if (id !== null) {
       fetch(`https://be-intern.onrender.com/api/v1/timekeeping/${id}/delete`, {
         method: "DELETE",
@@ -21,6 +20,7 @@ function DeleteButton({ api, resetView }) {
         });
     }
   }, [id]);
+  resetView(id);
 
   return <button onClick={() => setId(api)}>Delete</button>;
 }

@@ -3,7 +3,7 @@ import "../styles/Chamcong.scss"
 
 
 
-class Chamcong extends React.Component {
+class ChamCong extends React.Component {
     clickinto = (nub) => {
         this.props.HandleChangeShow(nub)
 
@@ -17,4 +17,4 @@ class Chamcong extends React.Component {
         )
     }
 }
-export default Chamcong;
+export default ChamCong;

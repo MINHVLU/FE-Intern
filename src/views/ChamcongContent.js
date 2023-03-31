@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/Chamcong_content.scss"
+import "../styles/ChamcongContent.scss"
 
-class Chamcong_content extends React.Component {
+class ChamcongContent extends React.Component {
     render() {
         return (
             <div className="Chamcong_content">
@@ -10,4 +10,4 @@ class Chamcong_content extends React.Component {
         )
     }
 }
-export default Chamcong_content;
+export default ChamcongContent;

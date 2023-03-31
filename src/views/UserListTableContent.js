@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/UserList_Table_content.scss";
 import DeleteButton from "./DeleteAccount";
 
-function UserList_Table_content(props) {
+function UserListInputContent(props) {
   const [users, setUsers] = useState([]);
   const [users2, setUsers2] = useState([]);
 
@@ -98,4 +98,4 @@ function UserList_Table_content(props) {
   );
 }
 
-export default UserList_Table_content;
+export default UserListInputContent;
