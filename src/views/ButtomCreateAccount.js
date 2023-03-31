@@ -1,64 +1,31 @@
 import { useState } from "react";
 
-const ButtonCreateAccount = () => {
-  const [headquarterId, setheadquarterId] = useState("");
-  const [employeeId, setemployeeId] = useState("");
-  const [timekeepingType, settimekeepingType] = useState("");
+const ButtonCreateAccount = ({ addEmail, addPassword, addRole }) => {
+  const [headquarterId, setEmail] = useState("");
+  const [password, setpassword] = useState("");
+  const [role, settimekeepingType] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      "http://192.168.1.18:8080/api/v1/timekeeping/store",
+      "http://192.168.1.18:8080/api/v1/employee/store",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ headquarterId, employeeId, timekeepingType }),
+        body: JSON.stringify({ email, password, role }),
       }
     );
-    const data = await response.json();
-    if (data.success) {
+    const data = await response();
+    if (response.status == 200) {
       alert("Add Item successful!");
     } else {
       alert("Add Item failed: ");
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Trụ sở chính:
-        <input
-          placeholder="..."
-          type="text"
-          value={headquarterId}
-          onChange={(event) => setheadquarterId(event.target.value)}
-        />
-      </label>
-
-      <label>
-        ID Nhân viên:
-        <input
-          placeholder="..."
-          type="text"
-          value={employeeId}
-          onChange={(event) => setemployeeId(event.target.value)}
-        />
-      </label>
-      <label>
-        Chấm công:
-        <input
-          placeholder="..."
-          type="text"
-          value={timekeepingType}
-          onChange={(event) => settimekeepingType(event.target.value)}
-        />
-      </label>
-
-      <button type="submit">Update</button>
-    </form>
-  );
+  return <button onClick={handleSubmit}>Add</button>;
 };
 
 export default ButtonCreateAccount;
