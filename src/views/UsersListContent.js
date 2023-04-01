@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/UsersList_content.scss";
 import UserListTableContent from "./UserListTableContent";
-import CreateAccount from "./UserListInputContent";
+import CreateAccount from "./CreateAccount";
 
 class UsersListContent extends React.Component {
   state = {

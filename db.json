@@ -7,154 +7,34 @@
       "role": "Admin"
     },
     {
-      "id": 2,
-      "email": "long@gmail.com",
-      "pass": "a",
-      "role": "Admin"
+      "email": "phuc@gmail.com",
+      "password": "a",
+      "role": "Admin",
+      "id": 2
     },
     {
-      "id": 3,
-      "email": "minh@gmail.com",
-      "pass": "a",
-      "role": "User"
+      "email": "asd",
+      "password": "a",
+      "role": "Admin",
+      "id": 3
     },
     {
-      "id": 4,
-      "email": "khoa@gmail.com",
-      "pass": "a",
-      "role": "User"
+      "email": "asdfssfg",
+      "password": "asfg",
+      "role": "Admin",
+      "id": 4
     },
     {
-      "id": 5,
-      "email": "quoc@gmail.com",
-      "pass": "a",
-      "role": "User"
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
+      "email": "a",
+      "password": "a",
       "role": "",
+      "id": 5
+    },
+    {
+      "email": "adsfa",
+      "password": "adf",
+      "role": "Admin",
       "id": 6
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 7
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 8
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 9
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 10
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 11
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 12
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 13
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 14
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 15
-    },
-    {
-      "email": "vuatrochoi159@gmail.com",
-      "password": "asd",
-      "role": "",
-      "id": 16
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 17
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 18
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 19
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 20
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 21
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 22
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 23
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 24
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 25
-    },
-    {
-      "email": "quoc@gmail.com",
-      "password": "a",
-      "role": "",
-      "id": 26
     }
   ],
   "profile": {
