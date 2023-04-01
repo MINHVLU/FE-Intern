@@ -7,6 +7,7 @@ function UsersListContent() {
 
   const handleInputChange = () => {
     setList(!list);
+    console.log("hihi");
   };
 
   return (
