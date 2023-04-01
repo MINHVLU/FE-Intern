@@ -1,13 +1,27 @@
 import React from "react";
 import "../styles/UserList_Input_content.scss";
 import { useState } from "react";
-import ButtonCreateAccount from "./ButtomCreateAccount";
 
-const UserListTableContent = () => {
+const CreateAccount = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("http://localhost:5000/database", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password, role }),
+    });
+    if (response.status === 201) {
+      alert(`Thêm email: ${email} thành công`);
+    } else {
+      alert("Thêm thất bại");
+    }
+  };
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -68,16 +82,18 @@ const UserListTableContent = () => {
             <div class="clearfix">
               <button
                 type="button"
-                class="cancelbtn"
+                className="cancelbtn"
                 onClick={() => this.onlcickCancle()}
               >
                 Cancel
               </button>
-              <ButtonCreateAccount
-                addEmail={email}
-                addPassword={password}
-                addRole={role}
-              />
+              <button
+                type="buttom"
+                className="signupbtn"
+                onClick={handleSubmit}
+              >
+                Add
+              </button>
             </div>
           </div>
         </form>
@@ -85,4 +101,4 @@ const UserListTableContent = () => {
     </>
   );
 };
-export default UserListTableContent;
+export default CreateAccount;

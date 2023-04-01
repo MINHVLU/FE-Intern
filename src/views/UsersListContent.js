@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/UsersList_content.scss";
 import UserListTableContent from "./UserListTableContent";
-import UserListInputContent from "./UserListInputContent";
+import CreateAccount from "./UserListInputContent";
 
 class UsersListContent extends React.Component {
   state = {
@@ -24,7 +24,7 @@ class UsersListContent extends React.Component {
           </div>
         ) : (
           <div id="form">
-            <UserListInputContent Handlechangeinput={this.Handlechangeinput} />
+            <CreateAccount Handlechangeinput={this.Handlechangeinput} />
           </div>
         )}
       </>
