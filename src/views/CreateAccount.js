@@ -1,7 +1,7 @@
 import "../styles/UserList_Input_content.scss";
 import { useState } from "react";
 
-const CreateAccount = (Handlechangeinput) => {
+const CreateAccount = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
@@ -33,7 +33,7 @@ const CreateAccount = (Handlechangeinput) => {
     setRole(event.target.value);
   };
   const handleCancel = () => {
-    Handlechangeinput();
+    props.Handlechangeinput();
   };
 
   return (

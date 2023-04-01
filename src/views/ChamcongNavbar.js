@@ -1,20 +1,18 @@
 import React from "react";
-import "../styles/Chamcong.scss"
+import "../styles/Chamcong.scss";
 
+function ChamCong(props) {
+  const clickinto = (nub) => {
+    props.HandleChangeShow(nub);
+  };
 
-
-class ChamCong extends React.Component {
-    clickinto = (nub) => {
-        this.props.HandleChangeShow(nub)
-
-    }
-
-    render() {
-        return (
-            <>
-                <button className="nav-btn" onClick={() => this.clickinto(2)}>CHẤM CÔNG</button>
-            </>
-        )
-    }
+  return (
+    <>
+      <button className="nav-btn" onClick={() => clickinto(2)}>
+        CHẤM CÔNG
+      </button>
+    </>
+  );
 }
+
 export default ChamCong;

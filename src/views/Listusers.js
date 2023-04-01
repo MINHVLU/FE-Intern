@@ -1,19 +1,18 @@
 import React from "react";
-import "../styles/Listusers.scss"
+import "../styles/Listusers.scss";
 
+function Listusers(props) {
+  const clickInto = (num) => {
+    props.HandleChangeShow(num);
+  };
 
-
-class Listusers extends React.Component {
-    clickinto = (nub) => {
-        this.props.HandleChangeShow(nub)
-    }
-
-    render() {
-        return (
-            <>
-                <button className="nav-btn-Listusers" onClick={() => this.clickinto(3)}>USER LIST</button>
-            </>
-        )
-    }
+  return (
+    <>
+      <button className="nav-btn-Listusers" onClick={() => clickInto(3)}>
+        USER LIST
+      </button>
+    </>
+  );
 }
+
 export default Listusers;

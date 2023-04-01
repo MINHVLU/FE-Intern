@@ -1,23 +1,19 @@
 import React from "react";
-import "../styles/Navbar.scss"
+import "../styles/Navbar.scss";
 import Chamcong from "./ChamcongNavbar";
 import Listusers from "./Listusers";
 
+function Navbar(props) {
+  const handleChangeShow = (numberr) => {
+    props.HandleChangeShow(numberr);
+  };
 
-class Navbar extends React.Component {
-    HandleChangeShow = (numberr) => {
-        this.props.HandleChangeShow(numberr);
-    }
-
-
-    render() {
-        return (
-            <div id="navBar">
-                <Chamcong HandleChangeShow={this.HandleChangeShow} />
-                <Listusers HandleChangeShow={this.HandleChangeShow} />
-            </div>
-        )
-    }
+  return (
+    <div id="navBar">
+      <Chamcong HandleChangeShow={handleChangeShow} />
+      <Listusers HandleChangeShow={handleChangeShow} />
+    </div>
+  );
 }
 
 export default Navbar;
